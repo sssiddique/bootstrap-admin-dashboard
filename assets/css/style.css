@@ -132,14 +132,10 @@ h4 {
     margin-left: 1.7rem;
 }
 
-@media (min-width: 768px) {
-    .sidebar-item {
-        margin-left: 1.3rem;
-    }
-}
-
 a.sidebar-link {
-    padding: .625rem 1.6rem .625rem 0rem;
+    /* padding: .625rem 1.6rem .625rem 0rem; */
+    /* padding: .625rem 1.625rem; */
+    padding: .625rem 1.625rem .625rem 0.9rem;
     color: #e9ecef;
     position: relative;
     display: block;
@@ -166,10 +162,20 @@ a.sidebar-link {
     transition: all .2s ease-out;
 }
 
-.sidebar-dropdown-item {
-    margin-left: 0.4rem;
+.sidebar-dropdown {
+    margin-left: 0.9rem;
+    /* Same as the sidebar-item margin */
 }
 
+.sidebar-dropdown-item {
+    padding-left: 1.50rem;
+    /* Add padding to align with the parent */
+}
+
+.list-unstyled {
+    padding-left: 2px;
+    list-style: none;
+}
 
 .avatar {
     height: 40px;
@@ -184,14 +190,6 @@ a.sidebar-link {
     flex: 1;
     max-width: 100vw;
     width: 100vw;
-}
-
-
-@media (min-width: 768px) {
-    .content {
-        max-width: auto;
-        width: auto;
-    }
 }
 
 .card {
@@ -213,16 +211,6 @@ a.sidebar-link {
 #sidebar.collapsed {
     margin-left: -264px;
 }
-
-/* footer and Nav */
-
-
-@media (max-width: 767.98px) {
-    .navbar, footer {
-        width: 100vw;
-    }
-}
-
 
 /* Theme Toggle */
 .theme-toggle {
@@ -252,4 +240,26 @@ html[data-bs-theme="dark"] .theme-toggle .fa-moon {
 
 html[data-bs-theme="light"] .theme-toggle .fa-sun {
     display: none;
+}
+
+
+/* Responsive */
+
+@media (min-width: 768px) {
+    .sidebar-item {
+        margin-left: 1.3rem;
+    }
+
+    .content {
+        max-width: auto;
+        width: auto;
+    }
+}
+
+
+/* footer and Nav */
+@media (max-width: 767.98px) {
+    .navbar, footer {
+        width: 100vw;
+    }
 }
